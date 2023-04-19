@@ -11,6 +11,11 @@ class Animal {
 		console.log("The " + ${this._species} + " makes a sound.");
 	}
 }
+class Cat extends Animal {
+	purr(){
+	console.log('purr');	
+	}
+}
 
 class Dog extends Animal {
 	bark(){
@@ -18,11 +23,7 @@ class Dog extends Animal {
 	}
 }
 
-class Cat extends Animal {
-	purr(){
-	console.log('purr');	
-	}
-}
+
 // const animal = new Animal("unknown");
 // console.log(animal.species); // "unknown"
 // animal.makeSound(); // "The unknown makes a sound."
