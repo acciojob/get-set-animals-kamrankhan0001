@@ -14,15 +14,28 @@ class Animal {
 
 class Dog extends Animal {
 	bark(){
-		console.log("The Golden Retriever makes a sound");
+		console.log("woof");
 	}
 }
 
 class Cat extends Animal {
 	purr(){
-	console.log("The Siamese makes a sound");	
+	console.log("purr");	
 	}
 }
+const animal = new Animal("unknown");
+console.log(animal.species); // "unknown"
+animal.makeSound(); // "The unknown makes a sound."
+
+const cat = new Cat("cat");
+console.log(cat.species); // "cat"
+cat.makeSound(); // "The cat makes a sound."
+cat.purr(); // "purr"
+
+const dog = new Dog("dog");
+console.log(dog.species); // "dog"
+dog.makeSound(); // "The dog makes a sound."
+dog.bark(); // "woof"
 
 // Do not change the code below this line
 window.Animal = Animal;
